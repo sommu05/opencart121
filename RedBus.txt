@@ -1,0 +1,5 @@
+For the amount --> //div[@id='result-section']//li[@class='row-sec clearfix']//div[@class='clearfix bus-item-details']//div[@class='fare d-block']//span
+
+
+For the view seats --> //div[@id='result-section']//li[@class='row-sec clearfix']//div[@class='button view-seats fr']
+
