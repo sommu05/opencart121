@@ -1,0 +1,22 @@
+
+
+Framework:
+What is page object class contains?
+What are the utility files you created.
+How you have generated the reports okay.
+what are the test cases you have automated.
+how you push the project in the GitHub repository, 
+how you have executed in the Jenkins.
+
+
+People two, three years of experience.
+So they mainly contribute, uh, like they create some page object classes.
+They create some new test cases and they will participate in the execution. So these are the major tasks. Normally they do.
+
+You can just tell I contributed something towards the framework.
+
+What are the test cases you are automated from your project?
+
+Git merging concepts is in the tutorial useful links 
+
+Resume templates are available
