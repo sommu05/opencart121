@@ -1,0 +1,292 @@
+In automation framework there are mainly two approaches 
+
+TDD - Test driven development.
+BDD - Behavioral driven development.
+
+These are the two different approaches to automate the test cases.
+
+
+Difference between TDD and BDD:
+
+Test driven development
+------------------------
+
+Here in TDD will focus mainly on micro-level testing, like for example unit testing, integration testing, functional testing.
+
+So these are all micro level testing because each and every componenet in the application will be tested. So which is comes under TDD.
+
+Example: TestNG, JUnit.
+
+The second thing is in TDD, only the technical people can understand the stuff, like whatever we created or designed.
+
+In the TDD frameworks, only the technical people can understand the developers or automation testers.
+
+They can understand the code, they can create a new test cases, they can execute the test cases.
+
+But other non-technical team cannot understand that like product manager or stakeholder or client or customer they can't understand what exactly you have written in the code.
+
+So that is test driven development.
+
+
+
+Behavioral driven development
+-----------------------------
+
+This kind of framework is driven by the behaviour of the application.
+Like it will focus mainly on the features of the application or functionality of the application with very high level it will not go in depth of application, means it will not test any micro level components in your code like unit testing, integration testing.
+ 
+It will not perform that level of testing, so BDD will high level it will focus.
+
+As a user point of view, as a customer point of view.
+
+What are the exact things should have in your application?
+
+According to the user What I am going to do in the application same thing is working or not that is application behaviour.
+
+So here BDD framework will mainly focus on application behaviour 
+
+and examples like we have a cucumber,jbehave,sernity  different bdd tools available in the market.
+
+
+the main differences 
+---------------------
+
+1. TDD will mainly focus on micro level testing in unit testing, integration and somehow functional testing 
+   BDD we mainly focus on behavior of the application. Like, we will test the functionality, very high level functionality of the application with respect to customer or with respect to user.
+
+2. And TDD is more, technical oriented, whereas BDD is more behavior oriented means what technical orientation means Only the technical guys can understand that.
+   But BDD means everybody in the team, along with the technical as non-technical, also can understand the framework that is BDD.
+
+Cucumber is a predefined built in framwork which support BDD appraoch
+
+Cucumber will support BDD approach.
+So BDD is a an approach and cucumber is a tool through which we can create tests by following BDD rules and regulations.
+
+
+At very high level you can understand TDD is a more technical oriented BDD is more behavioral oriented like a user perspective.
+So everybody in the team can understand that is a major difference right.
+
+
+But why we need to go with BDD.
+
+If you take any team, we can see different type of people, mainly non-technical and technical stakeholders or customers or users.
+They are non technical people 
+
+Steholders/Customers, Product manager - They will Scrm masters always talk about the project at very high level.
+They may or may not technical 
+
+TDD can be undertand by technical people
+
+So to full to fill that particular gap.
+the BDD came into picture behavior driven development.
+So in the BDD approach, whatever the stuff you have created, even non-technical people also can easily understand.
+
+
+Three different files we need to understand in BDD
+---------------------------------------------------
+
+3 files
+-------
+
+1)Feature file
+2)Step definition file
+3)Test runner file 
+
+As per cucumber or as per BDD we call test cases as scenarios.
+
+***
+Feature file contains scenarios
+Scenarios means test/test case
+
+For example login.feature if I create one simple feature file called login.feature 
+
+In the login.feature file, we can write multiple scenarios like one scenario login with valid credentials. Another scenario login with invalid credentials.
+we can create multiple scenarios in one single feature file.
+
+what is a feature file contains?
+A feature file contains scenarios.
+
+What is the scenario?
+Scenario is a step by step action which we need to perform on the application.
+
+
+We use some different type of keywords while writing the scenarios in the feature file, and we call them as Gherkin keywords.
+
+Gherkin is a kind of a language in which we have certain number of keywords are available. So by using those keywords, we will write scenarios inside the feature file.
+
+Gherkin keywords:
+-----------------
+     Scenario - By using this kwyord we can create a scenario name
+     Feature - keyword
+     Given
+     When
+     Then  
+     And
+   
+By using this keywords we can write a scenario
+
+
+So if you take any type of test case, you will have three things.
+
+1. precondition or prerequisite.
+2. will perform certain number of actions.
+3. do validation.
+
+Pre-condition - Given
+actions  - When
+validation - Then
+For Multiple preconditions/actions/validation - And
+
+feature file extension .feature login.feature
+
+Feature: User Login  
+
+Feature    --> Keyoword
+User Login --> name of the feature 
+
+   Scenario: Succesful login
+       Given the user opens application
+       And the user navigate to login page
+       When the user entered valid user name and valid password
+       And the user clicked on submit button.
+       Then the user should see My account page.
+
+    Scenario: UnSuccesful login
+       Given the user opens application
+       And the user navigate to login page
+       When the user entered invalid user name and invalid password
+       And the user clicked on submit button.
+       Then the user shold see error on the login page
+
+
+
+So in cucumber approach when you start cucumber BDD framework approach, this is the first task you need to create feature files in the framework.
+
+So you can create multiple scenarios in one single feature file and inside the project you can create multiple feature files also.
+         
+
+2)Step definition file
+----------------------
+
+Implement these steps with Selenium Automation tool
+
+Step definition file contains different methods, 
+For every step we will create a separate method in the step definition file.
+
+step definition file contains methods which are represent steps in feature file
+
+In feature file if five steps there. So in step definition file you need to have five methods in step definition file.
+
+
+3)Test runner file 
+------------------
+
+  Test runner file  --> feature file,steps,reports etc.
+
+We don't directly run feature file, 
+we don't directly run step definition file.
+
+We will run the test runner class, and this test runner class will refer the feature file 
+
+Inside the feature file It will go through each and every step.
+While going through each and every step, it will execute the corresponding method from the step definition file.
+
+So feature file, step definition file and test runner class. So these are the three classes Should associated each other, communicate each other.
+
+
+First in feature file we will create a multiple scenarios.
+
+Inside the scenarios we will have a multiple steps okay.
+
+So for every step in the feature file we will have a different methods We will create in the step definition file.
+
+So every step will associated with one method in the step definition file okay.
+
+And once you create a step definition file then we will create a test runner class.
+
+In the test runner class we will specify which feature file we want to execute.
+
+You may have n number of feature files, so you can execute all the feature files Or if you want to execute a specific feature file, you can also execute it.
+
+So you can specify the feature file path and the step definition, file path and other configurations in the test runner class.
+
+And once you specify this, you will run the test runner class every time. Whenever you run the test runner class and whichever feature file you specified in the test runner class, it will go to that particular feature file, and it will execute the scenarios while executing the scenarios, it will read each and every step from the definition file and step definition file methods will be executed on that application.
+
+So this is the how these three file communicate each other at the time of development.
+
+First we will create a feature file.
+Then we will create a step definition file.
+At last we will create a test runner file at the time of execution.
+
+First test runner file. We have to start execution this test runner file internally execute the feature file again Feature file internally refers the step definition file.
+This is the process.
+
+***Install Cucumber plugin in the eclipse
+
+What is the first thing we need to do when you create a new Maven project?
+
+Yes, you need to update Pom.xml with the required dependencies.
+
+
+all given is a prerequisite.
+all When are actions, 
+all then are validation.
+
+How feature file will recognise this step definition file, how both are connected
+These both are connected with description
+
+@Given("the user is on the nopCommerce page")
+
+
+
+We just executed your feature file in the console window. It is suggested all the methods we just copied and put them in the login step.
+
+
+whatever you put in the double quotations inside the feature file they will treat as a parameters.
+
+Cucumber supports jnuit only
+
+In testRunner file
+
+
+@RunWith(Cucumber.class)
+@CucumberOptions( 
+                  features = {".//FeatureFiles/login.feature"}, 
+                  glue= "stepDefinitons" 
+                 )
+
+public class TestRun{
+
+}
+
+glue is a keyword which will be used to specify the package for step definitions
+
+the entire project is having only one test runner class.
+no body for testrunner class
+We maintain everything with Cucumber options
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
